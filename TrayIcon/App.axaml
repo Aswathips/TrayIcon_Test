@@ -1,0 +1,32 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TrayIcon.ViewModel"
+             x:Class="TrayIcon.App">
+    <Application.Styles>
+        <SimpleTheme />
+    </Application.Styles>
+    <Design.DataContext>
+        <local:ApplicationViewModel />
+    </Design.DataContext>
+    
+    <TrayIcon.Icons>
+        <TrayIcons>
+            <TrayIcon Icon="{Binding Icon}" ToolTipText="TrayIcon" IsVisible="True">
+                <TrayIcon.Menu>
+                    <NativeMenu>
+                        <NativeMenuItem Header="Change Icon" Click="NativeMenuItem_OnClick"/>
+                        <NativeMenuItem Header="Settings">
+                            <NativeMenuItem.Menu>
+                                <NativeMenu>
+                                    <NativeMenuItem Header="Option 1" />
+                                    <NativeMenuItem Header="Option 2"  />
+                                    <NativeMenuItem Header="Option 3"/>
+                                </NativeMenu>
+                            </NativeMenuItem.Menu>
+                        </NativeMenuItem>
+                    </NativeMenu>
+                </TrayIcon.Menu>
+            </TrayIcon>
+        </TrayIcons>
+    </TrayIcon.Icons>
+</Application>

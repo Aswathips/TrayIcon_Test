@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TrayIcon.MainWindow"
+        Title="TrayIcon"
+        Width="335"
+        Height="370"
+        WindowStartupLocation="CenterScreen"
+        Background="White"
+        FontFamily="Segoe UI, 10.75pt, style=Bold">
+        <Border BorderThickness="19,40,19,19">
+                <StackPanel Spacing="20">
+                        <TextBlock Text="Tray Icon Test App"></TextBlock>
+                        <Button Click="Button_OnClick">Change Icon</Button>
+                        <Button Click="Button1_OnClick">Previous Icon</Button>
+                        <Button Click="Button2_OnClick">Close the window</Button>
+                        <Button Click="Button3_OnClick">Quit the App</Button>
+                </StackPanel>
+        </Border>
+</Window>
